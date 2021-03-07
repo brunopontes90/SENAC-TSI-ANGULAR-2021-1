@@ -1,9 +1,14 @@
 import * as rs from 'readline-sync';
 
-let nota1 = Number(rs.question('Digite a 1º nota: '));
-let nota2 = Number(rs.question('Digite a 2º nota: '));
-let nota3 = Number(rs.question('Digite a 3º nota: '));
-let media = Number(nota1 + nota2 + nota3) / 3;
+let nota: number = 0;
+let soma: number = 0;
+let media: number = 0;
+for (let i = 1; i <= 3; i++) {
+    nota = Number(rs.question(`Digite a ${i}º nota: `));
+    soma += (nota / 3);
+}
+
+media = soma;
 
 if((8 <= media) && (media <= 10)){
     console.log('Nota A');
