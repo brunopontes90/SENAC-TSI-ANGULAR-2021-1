@@ -1,0 +1,14 @@
+<h1 style="text-align: center;">Exercicios 3 - Diretivas</h1>
+
+<div>
+    <select [(ngModel)]="opcao">
+      <option value="whatsapp" name="whatsapp">Whatsapp</option>
+      <option value="email" name="email">E-mail</option>
+
+      <input type="number" name="whatsapp" *ngIf="retornaWhats">
+      <input type="email" name="email" [(ngModel)]="retornaEmail">
+  </select>
+</div>
+
+<button (click)="validar()">Validar</button>
+<hr>
