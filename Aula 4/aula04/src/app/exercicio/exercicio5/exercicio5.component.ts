@@ -12,12 +12,12 @@ export class Exercicio5Component implements OnInit {
   ngOnInit(): void {
   }
 
-toggleImg(): void{
-  if(this.imgSource === '/assets/dAce.jpeg'){
-  this.imgSource = '/assets/luffy.jpg';
-  }else{
-    this.imgSource = '/assets/dAce.jpeg';
+  toggleImg(): void{
+    if(this.imgSource === '/assets/dAce.jpeg'){
+      this.imgSource = '/assets/luffy.jpg';
+    }else{
+      this.imgSource = '/assets/dAce.jpeg';
+    }
   }
-}
 
 }
