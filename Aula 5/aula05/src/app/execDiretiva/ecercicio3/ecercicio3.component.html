@@ -1,14 +1,16 @@
 <h1 style="text-align: center;">Exercicios 3 - Diretivas</h1>
 
-<div>
-    <select [(ngModel)]="opcao">
-      <option value="whatsapp" name="whatsapp">Whatsapp</option>
-      <option value="email" name="email">E-mail</option>
+<select [(ngModel)]="tipoContato" style="margin-bottom: 10px;">
+    <option label="Whatsapp" value="whats" >Whatsapp</option>
+    <option label="Email" value="email">E-mail</option>
+</select>
 
-      <input type="number" name="whatsapp" *ngIf="retornaWhats">
-      <input type="email" name="email" [(ngModel)]="retornaEmail">
-  </select>
+<div *ngIf="tipoContato == 'whats'">
+    <input type="tel" placeholder="Whatsapp" [(ngModel)]="whats">
 </div>
 
-<button (click)="validar()">Validar</button>
+<div *ngIf="tipoContato == 'email'">
+    <input type="mail" placeholder="Email" [(ngModel)]="email">
+</div>
+
 <hr>

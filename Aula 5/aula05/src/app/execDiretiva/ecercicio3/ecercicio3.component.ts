@@ -6,21 +6,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./ecercicio3.component.css']
 })
 export class Ecercicio3Component implements OnInit {
-  whatsapp = '';
+  tipoContato = '';
+  whats = '';
   email = '';
-  opcao = '';
-
-  retornaWhats = '';
-  retornaEmail = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  validar(): void{
-    if(this.opcao === this.whatsapp){
-      this.retornaWhats = this.whatsapp;
-    }
-  }
+
 }

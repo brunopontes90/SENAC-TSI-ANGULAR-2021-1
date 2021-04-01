@@ -7,20 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Ecercicio1Component implements OnInit {
 
-  numero: number = 0;
+  numero = 0;
   retorno = '';
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  validaPar(): void{
-    if(this.numero >= 0){
-      this.retorno = 'É positivo'
-    }else{
-      this.retorno = 'É negativo';
-    }
   }
 
 }

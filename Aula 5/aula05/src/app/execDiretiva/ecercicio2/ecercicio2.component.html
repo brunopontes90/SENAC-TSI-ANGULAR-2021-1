@@ -1,5 +1,16 @@
 <h1 style="text-align: center;">Exercicios 2 - Diretivas</h1>
-<input type="text" [(ngModel)]="numero">
-<p *ngIf="numero">Retorno: {{this.retorno}}</p>
-<button (click)="validaPar()">Validar</button>
+<input type="number" [(ngModel)]="numero">
+
+<div *ngIf="numero == 0">
+    <p>Zero</p>
+</div>
+
+<div *ngIf="numero < 0">
+    <p>Número negativo</p>
+</div>
+
+<div *ngIf="numero > 0">
+    <p>Número positivo</p>
+</div>
+
 <hr>

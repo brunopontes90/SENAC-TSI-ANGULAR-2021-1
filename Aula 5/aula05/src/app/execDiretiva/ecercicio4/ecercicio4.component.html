@@ -1,37 +1,14 @@
 <h1 style="text-align: center;">Exercicios 4 - Diretivas</h1>
-<div>
-    <label for="valor1">1º valor
-    <input type="number" [(ngModel)]="num1" name="valor1" required>
-  </label>
-</div>
-<div style="margin-top: 10px;">
-    <label for="valor2">2° valor
-    <input type="number" [(ngModel)]="num2" name="valor2" required>
-  </label>
-</div>
 
-<div style="margin-top: 10px;">
-    <input type="checkbox" [(ngModel)]="somar">
-    <label style="margin-right: 10px;" for="calc">+</label>
+<input type="number" [(ngModel)]="num1"><br><br>
+<input type="number" [(ngModel)]="num2"><br><br>
 
-    <input type="checkbox" [(ngModel)]="div">
-    <label style="margin-right: 10px;" form="calc">/</label>
-
-    <input type="checkbox" [(ngModel)]="mult">
-    <label style="margin-right: 10px;" form="calc">*</label>
-
-    <input type="checkbox" [(ngModel)]="sub">
-    <label style="margin-right: 10px;" form="calc">-</label>
-</div>
-
-<div style="margin-top: 10px;">
-    <label for="res">Resultado
-    <input id="" type="text" [(ngModel)]="resultado" name="res">
-  </label>
-</div>
-
-<div style="margin-top: 10px;">
-    <button (click)="validar()">Calcular</button>
+<div *ngIf="num1 && num2">
+    <button (click)="validar('+')">+</button>
+    <button (click)="validar('-')">-</button>
+    <button (click)="validar('*')">*</button>
+    <button (click)="validar('/')">/</button>
+    <p>{{resultado}}</p>
 </div>
 
 <hr>

@@ -16,7 +16,6 @@ import { Ecercicio1Component } from './execDiretiva/ecercicio1/ecercicio1.compon
 import { Ecercicio2Component } from './execDiretiva/ecercicio2/ecercicio2.component';
 import { Ecercicio3Component } from './execDiretiva/ecercicio3/ecercicio3.component';
 import { Ecercicio4Component } from './execDiretiva/ecercicio4/ecercicio4.component';
-import { Ecercicio5Component } from './execDiretiva/ecercicio5/ecercicio5.component';
 
 
 
@@ -33,7 +32,6 @@ import { Ecercicio5Component } from './execDiretiva/ecercicio5/ecercicio5.compon
     Ecercicio2Component,
     Ecercicio3Component,
     Ecercicio4Component,
-    Ecercicio5Component
   ],
   imports: [
     BrowserModule,
