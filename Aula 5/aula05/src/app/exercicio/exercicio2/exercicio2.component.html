@@ -1,0 +1,13 @@
+<h1 style="text-align: center;">Exercicio 2</h1>
+
+<div style="text-align: center;">
+    <p>Digite a raça: <input type="text" [(ngModel)]="cachorro" placeholder="Qual a raça?"></p>
+    <img [src]="imgSource" style="width: 300px;">
+</div>
+
+<div style="text-align: center;">
+    <button (click)="raca()" style="margin: 10px;">Validar</button>
+    <button (click)="limpar()">Limpar</button>
+</div>
+
+<hr>

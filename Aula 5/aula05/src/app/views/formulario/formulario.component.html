@@ -1,0 +1,52 @@
+<h1 style="text-align: center;">Exemplos</h1>
+<h2>Binding de Duas Vias</h2>
+
+<!-- [(ngModel)] SERIA O MESMO QUE VALUE, A PROPRIEDADE ESTA VINCULADA AO TS -->
+<input type="text" [(ngModel)]="nome">
+
+<br><br> Nome: {{nome}}
+
+<br><br>
+
+<button (click)="limpar();">Limpar</button>
+
+<hr>
+
+<h2>Bindings de Duas Vias em Selects</h2>
+<select [(ngModel)]="cidade">
+  <option value="saopaulo">São Paulo</option>
+  <option value="santos">Santos</option>
+  <option value="campinas">Campinas</option>
+  <option value="sorocaba">Sorocaba</option>
+</select>
+<!-- ESTA RETORNANDO O VALUE -->
+<p>Cidade Selecionada: {{cidade}}</p>
+<hr>
+
+<h2>Bindings de Duas Vias em Checkbox</h2>
+<h4>Preferencias de Contato</h4>
+<!-- LIGANDO DE DESLIGANDO O CHECKBOX -->
+<input id="email" type="checkbox" [(ngModel)]="prefEmail">
+<label for="email">Enviar Email</label>
+
+<input id="telefone" type="checkbox" [(ngModel)]="prefTel">
+<label for="telefone">Falar por Telefone</label>
+
+<p>Email: {{prefEmail}}</p>
+<p>Telefone: {{prefTel}}</p>
+<hr>
+
+<!-- PEGA O VALOR SELECIONADO -->
+<h2>Bindings de Duas Vias em Radios</h2>
+<input id="masc" type="radio" value="masc" [(ngModel)]="genero">
+<label for="masc">Masculino</label>
+
+<input id="fem" type="radio" value="fem" [(ngModel)]="genero">
+<label for="fem">Feminino</label>
+
+<input id="out" type="radio" value="out" [(ngModel)]="genero">
+<label for="out">Outro</label>
+
+<p>Genreo: {{genero}}</p>
+
+<hr>
