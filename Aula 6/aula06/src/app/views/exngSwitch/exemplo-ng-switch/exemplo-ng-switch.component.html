@@ -1,0 +1,10 @@
+<h1 style="text-align: center;">Exemplos de ngSwitch</h1>
+
+<input type="text" [(ngModel)]="raca">
+
+<div [ngSwitch]="raca" style="width: 300px;">
+    <img src="/assets/pitbull.jpg" *ngSwitchCase="'pitbull'">
+    <img src="/assets/vira-lata.jpg" *ngSwitchCase="'vira lata'">
+    <img src="/assets/pastor-alemao.jpg" *ngSwitchCase="'pastor alemao'">
+    <img src="/assets/erro-dog.jpg" *ngSwitchDefault>
+</div>

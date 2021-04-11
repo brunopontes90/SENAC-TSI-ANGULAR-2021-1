@@ -1,0 +1,20 @@
+<h1 style="text-align: center;">Exemplos de ngFor</h1>
+
+<!-- ESTADO É O INCEMENTADOR, ESTADOS É O ARRAY -->
+<!-- INDEX, MEIO QUE VARIAVEL ESCONDIDA, DESSA FORMA CONSEGUE COLCOAR O INCREMENTADOR -->
+<ul>
+    <li *ngFor="let estado of estados; let i = index">
+        {{estado}} - ({{i}})
+    </li>
+</ul>
+
+<table style="text-align: center;">
+    <tr>
+        <th>Nome</th>
+        <th>Nota</th>
+    </tr>
+    <tr *ngFor="let jogo of jogos; let i = index;">
+        <td>{{jogo}}</td>
+        <td>{{notas[i]}}</td>
+    </tr>
+</table>
