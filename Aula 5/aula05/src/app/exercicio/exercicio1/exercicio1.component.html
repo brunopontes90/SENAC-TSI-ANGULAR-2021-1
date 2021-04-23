@@ -1,0 +1,18 @@
+<h1 style="text-align: center;">Exercicio 1</h1>
+
+<div>
+    <input type="number" [(ngModel)]="num1" placeholder="Digite o 1º valor">
+    <p>1º Valor: {{num1}}</p>
+</div>
+<div>
+    <input type="number" [(ngModel)]="num2" placeholder="Digite o 2º valor">
+    <p>2º Valor: {{num2}}</p>
+</div>
+
+<div>
+    <p>Soma: {{soma}}</p>
+    <button (click)="somando()" style="margin-right: 10px;">Somar</button>
+    <button (click)="limpar()">Limpar</button>
+</div>
+
+<hr>

@@ -1,0 +1,31 @@
+<h1 style="text-align: center;">Exercicio 4</h1>
+
+<div>
+    <input type="number" placeholder="1° valor" [(ngModel)]="num1">
+    <input type="number" placeholder="2° valor" [(ngModel)]="num2">
+</div>
+
+<div style="margin-top: 10px;">
+    <!-- SOMA -->
+    <input type="radio" id="soma" value="soma" [(ngModel)]="soma">
+    <label for="soma">Soma</label>
+
+    <!-- DIVISÃO -->
+    <input type="radio" id="divisao" value="divisao" [(ngModel)]="div">
+    <label for="divisao">Divisão</label>
+
+    <!-- MULTIPLICAÇÃO -->
+    <input type="radio" id="multiplicacao" value="multiplicacao" [(ngModel)]="mult">
+    <label for="multiplicacao">Multiplicacao</label>
+
+    <!-- SUBTRAÇÃO -->
+    <input type="radio" id="subtracao" value="subtracao" [(ngModel)]="sub">
+    <label for="subtracao">Subtracao</label>
+</div>
+
+<div style="margin-top: 10px;">
+    <input type="number" placeholder="Resultado" [(ngModel)]="result">
+    <button (click)="calculadora()" style="margin-left: 10px;">Calcular</button>
+</div>
+
+<hr>

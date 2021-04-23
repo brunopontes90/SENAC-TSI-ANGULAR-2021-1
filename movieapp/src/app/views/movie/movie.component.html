@@ -1,0 +1,15 @@
+<h2>MyIMDB</h2>
+
+<ul>
+    <li *ngFor="let movie of movies; let i = index" (click)="setMovie(movie)">
+        {{movie.name}} - {{movie.rating}} <button (click)="remove(i);">X</button>
+    </li>
+</ul>
+
+<button (click)="newMovie();">New Movie</button>
+
+<div *ngIf="selectMovie">
+    <input type="text" [(ngModel)]="selectMovie.name">
+    <br>
+    <input type="number" [(ngModel)]="selectMovie.rating">
+</div>
