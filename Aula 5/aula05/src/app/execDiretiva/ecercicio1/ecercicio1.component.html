@@ -1,0 +1,9 @@
+<h1 style="text-align: center;">Exercicios 1 - Diretivas</h1>
+<input type="number" [(ngModel)]="numero">
+
+<!-- SE NUMERO > 0 IRA RETORNAR A TAG <p>-->
+<div *ngIf="numero > 0">
+    <p>Numero positivo</p>
+</div>
+
+<hr>
