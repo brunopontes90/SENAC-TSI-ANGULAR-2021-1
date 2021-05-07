@@ -1,0 +1,25 @@
+.menu {
+    display: flex;
+    padding-inline-start: 0;
+}
+
+.menu li {
+    list-style: none;
+    background-color: #223b8d;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px white;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: background-color 0.5s;
+}
+
+.menu li:hover {
+    background-color: #446bec;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #e6e6e6;
+}

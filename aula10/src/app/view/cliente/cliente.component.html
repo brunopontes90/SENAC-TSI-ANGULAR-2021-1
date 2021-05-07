@@ -1,5 +1,19 @@
-<ul>
+<h2>Manter Clientes</h2>
+
+<a class="main-button" (click)="novo()">Novo</a>
+
+<ul class="model-list">
     <li *ngFor="let cliente of clientes">
-        {{cliente.cpf}} - {{cliente.nome}}
+        <span (click)="editar(cliente)">{{cliente.cpf}} - {{cliente.nome}}</span>
+        <span (click)="excluir(cliente.id)" class="del-button">x</span>
     </li>
 </ul>
+
+<div *ngIf="cliente">
+    <input placeholder="Nome" [(ngModel)]="cliente.nome">
+    <br>
+    <input placeholder="CPF" [(ngModel)]="cliente.cpf">
+    <br>
+    <button (click)="cancelar()">Cancelar</button>
+    <button (click)="salvar()">Salvar</button>
+</div>
