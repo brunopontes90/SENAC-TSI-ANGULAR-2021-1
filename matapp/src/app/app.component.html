@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <h1>Cadastro de Usuário</h1>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- ABRE O MENU
+#sidenav como de fosse id
+abre o componente no button
+-->
+<mat-sidenav-container>
+
+    <mat-sidenav class="sidenav" #sidenav mode="side" opened="false">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/usuer">
+                <mat-icon class="menu-icon">person</mat-icon>User</a>
+            <a mat-list-item routerLink="/about">
+                <mat-icon class="menu-icon">help</mat-icon>Sobre</a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div style="min-height: calc(100vh - 64px)">
+            <!-- CARREGA O CONTEUDO -->
+            <main>
+                <mat-card>
+                    <router-outlet></router-outlet>
+                </mat-card>
+            </main>
+
+        </div>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
