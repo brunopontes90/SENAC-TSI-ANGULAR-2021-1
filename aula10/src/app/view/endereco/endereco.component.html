@@ -1,0 +1,22 @@
+<h2>Consulta Cep</h2>
+
+<input placeholder="CEP" [(ngModel)]="cep">
+
+<button (click)="consultar()">Consultar CEP</button>
+
+<div *ngIf="endereco">
+    <p>{{endereco.cep}}</p>
+    <p>{{endereco.logradouro}}</p>
+    <p>{{endereco.complemento}}</p>
+    <p>{{endereco.bairro}}</p>
+    <p>{{endereco.localidade}}</p>
+    <p>{{endereco.uf}}</p>
+    <p>{{endereco.ibge}}</p>
+    <p>{{endereco.gia}}</p>
+    <p>{{endereco.ddd}}</p>
+    <p>{{endereco.siafi}}</p>
+</div>
+
+<br>
+
+<img *ngIf="isLoading" src="/assets/download.gif">
