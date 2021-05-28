@@ -13,7 +13,7 @@ abre o componente no button
 -->
 <mat-sidenav-container>
 
-    <mat-sidenav class="sidenav" #sidenav mode="side" opened="false">
+    <mat-sidenav class="sidenav" #sidenav [mode]="screenWidth > 600 ? 'side' : 'over'" opened="false">
         <mat-nav-list>
             <a mat-list-item routerLink="/usuer">
                 <mat-icon class="menu-icon">person</mat-icon>User</a>
@@ -27,6 +27,7 @@ abre o componente no button
             <!-- CARREGA O CONTEUDO -->
             <main>
                 <mat-card>
+                    <!-- LUGAR ONDE APARECE O CONTEUDO AO CLICAR NO LINK -->
                     <router-outlet></router-outlet>
                 </mat-card>
             </main>

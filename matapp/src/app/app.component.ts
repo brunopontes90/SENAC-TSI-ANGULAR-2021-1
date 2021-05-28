@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'matapp';
+  screenWidth = window.innerWidth;
+
+
+  @HostListener('window:resize', ['$event'])
+
+  // tslint:disable-next-line: typedef
+  onResize(){
+    this.screenWidth = window.innerWidth;
+  }
 }
